@@ -1,0 +1,115 @@
+---
+title: 'Early Thoughts About Learning Ruby on Rails'
+description: 'Sharing my early thoughts about learning Ruby, Ruby on Rails, how how DHH fits into the picture'
+pubDate: 'Jul 20 2025'
+heroImage: '../../assets/blog-placeholder-3.jpg'
+tags: ["ruby", "rails", "programming", "web dev"]
+---
+import { Tweet, Vimeo, YouTube } from 'astro-embed';
+
+
+# Table of Contents
+
+1.  [The Journey So Far](#org2ff2a9a)
+2.  [Where We Are](#org326106a)
+3.  [The Good](#orgd434fba)
+4.  [The Opportunities](#org57bb9ac)
+    1.  [The Controller To View Connection](#org04343f0)
+    2.  [Tests](#org14b8f8d)
+    3.  [The Rails &rsquo;Secret Handshake&rsquo;](#org4546679)
+5.  [The Future?](#orgb6fd91f)
+6.  [Overall](#orgf74b653)
+
+
+
+<a id="org2ff2a9a"></a>
+
+## The Journey So Far
+
+Last year, I watched this [video](https://www.youtube.com/watch?v=mTa2d3OLXhg). In it [ThePrimeagen](https://x.com/ThePrimeagen) and [TJ DeVries](https://x.com/teej_dv) interview [DHH](https://x.com/dhh). While the interview goes over a lot of different topics, what appealed to me the most was the way DHH talked about his love for Ruby. I&rsquo;ve heard people talk about why they like or love a programming language, but I don&rsquo;t know that I&rsquo;ve heard anyone talk about it with that much zeal and excitement.
+<YouTube id="https://www.youtube.com/watch?v=mTa2d3OLXhg" />
+Another appealing point in this video was about focusing on keeping things simple. While I&rsquo;m still early in the journey, this was an appealing thought to me. I&rsquo;ve looked at web dev off and on for the past few years, but it&rsquo;s always seemed like trying to actually start with web dev was a mountain, there are so many things that people will tell you to learn. Beyond HTML and CSS, I had no idea where to go from there.
+
+That conversation led me to checking out Ruby on Rails a little bit and that indirectly ended up getting me to try out [DragonRuby](https://dragonruby.org/). I discuss that journey more fully in this [video](https://youtu.be/lm4x9IiH5-8).
+
+From there, I&rsquo;ve mostly focused on learning Ruby via DragonRuby. However, I&rsquo;ve finally come back to dig into Ruby on Rails. Why? A few key reasons:
+
+1. Right now, I have to figure out some game design and art aspects to my game, while I"m doing that, it makes sense to me to focus some of my programming time on Rails because&#x2026;
+
+2. I&rsquo;ve always wanted to know a way to create web project ideas I have (and that list keeps growing). To me, Rails being a more batteries included framework seems to fit that bill, and to boot, I get to practice more Ruby. Plus, Rails 8 & SQLite? Yes please, for most of my projects, this will be plenty to start with.
+
+3. I&rsquo;ve seen myself improve in programming in the past 7 months or so that I&rsquo;ve used DragonRuby. I want to keep that rolling. As I touched on in the video above, the lack of contenxt switching in DragonRuby has kept me coding longer and that is something I believe is super important for me to get better at it.
+
+
+<a id="org326106a"></a>
+
+## Where We Are
+
+I&rsquo;ve been putting time in looking through the [Rails Guides](https://guides.rubyonrails.org/). I&rsquo;ve also separately created a small forum like project that has a bit more complex model setup ([Github repo here](https://github.com/MichaelGame-Dev/ror_message_board)). My business analyst background has had me do a lot of SQL querying and that has come in handy for understanding the relationships, but I&rsquo;ve been focused on trying to learn the Rails way of doing things. I think in the near future, I can put together a resource list for others looking to learn Ruby on Rails or Ruby.
+
+
+<a id="orgd434fba"></a>
+
+## The Good
+
+I&rsquo;ve gotten relatively comfortable with models and am getting there on controllers. The pre-existing knowledge I have about databases has helped me conceptualize the relationships between tables fairly well. As I move forward, I want to focus more on using functionality like \`include\` and eager loading as the models get bit more complex to keep query counts down.
+
+I can definitely understand based on what I&rsquo;ve seen so far about how Rails can help you move very quickly. `rails generate scaffold ...` can do a lot to get a new piece of functionality working quickly. From there you may need remove or update some controller actions, drop some view templates, etc. Maybe in the real world you&rsquo;re not using the scaffold that much, but I can see how generating models, controllers, etc. can be a quick way to get things moving in the right direction.
+
+
+<a id="org57bb9ac"></a>
+
+## The Opportunities
+
+A few key challenges stand out and I have some ideas on trying to get past them
+
+
+<a id="org04343f0"></a>
+
+## The Controller To View Connection
+
+Most of the stuff I&rsquo;ve done so far has been fairly simple with one view to one controller. I want to look more closely at the TypeCraft &rsquo;[Rails New](https://www.youtube.com/watch?v=oEDkhfsFMTg&list=PLHFP2OPUpCeZcPutT9yn4-e0bMmrn5Gd1)&rsquo; video series and look at the final homepage as it looked like it contained data from both models of the project.
+
+I also found a nice tutorial project where the focus is on learning Turbo, but they have an interesting Rails setup I want to study a bit more. I&rsquo;m pretty sure I know what I need to do, but I sometimes struggle with wanting to do it the Rails way.
+
+As a bonus here, I want to pick up Turbo so I can do things like Turbo Streams/Frames to enable stuff like inline edits.
+
+
+<a id="org14b8f8d"></a>
+
+## Tests
+
+One area that I&rsquo;ve struggled with so far is tests seemingly being very counterintuitive when reading them. I&rsquo;ve been reading [Agile Web Development With Rails 8](https://pragprog.com/titles/rails8/agile-web-development-with-rails-8/), and trying to parse the tests has been tricky. I haven&rsquo;t done as much testing with the DragonRuby side of things in programming, so I suspect that&rsquo;s part of the reason.
+
+I plan to dig a bit more and find some more solid resouces just to make sure I understand them better, and also to avoid the generic bad example tests that some give.
+
+
+<a id="org4546679"></a>
+
+## The Rails &lsquo;Secret Handshake&rsquo;
+
+I think this is one of the trickiest parts of learning Rails now. There&rsquo;s a lot of conventions built into Rails which means there are ways to write less code to get something done.
+
+But for someone that&rsquo;s newer to Ruby/Rails that can be a bit tougher of a thing to figure out. There are times I look at an example and I&rsquo;m just like, &ldquo;How should I know that syntax??&rdquo;
+
+I think the biggest thing here for me is to keep programming and seeing more of the patterns for these. I have also started reading the book [99 Bottles of OOP](https://sandimetz.com/99bottles) to help me get better at this process as well.
+
+
+<a id="orgb6fd91f"></a>
+
+## The Future?
+
+While I still have a long ways to go right now, my current knowledge of Rails has definitely given me some ideas on future sites I want to create. Some will be a bit unique, for example, I&rsquo;d like to build a pomodoro timer that I can have on my phone as a PWA. I think that&rsquo;s a really simple, though a bit unique Rails app. I also have an idea for an app for a stream dashboard as I get back to doing dev streams. This would be something designed for local use only, but it would give me some time to really work on understanding systems like ActionCable (and a bit of Turbo/Hotwire).
+
+I also have a few app ideas on potential sites that may go live. One is a self-hostable alternative to a pretty big sass. I&rsquo;m not expecting the app to be huge, but I think it has potential to be interesting in certain situations. I&rsquo;m hoping it to be in the model of the [ONCE](https://once.com/) apps by 37 signals where I&rsquo;m not doing the hosting. The actual idea is fairly simple, but it&rsquo;s going to need a lot of polish (and learning on my part) to turn it into what it needs to be to give the right UX.
+
+I&rsquo;m sure there&rsquo;s also the possibility to connect a DragonRuby game to a Rails API site of some kind.
+
+Who knows, maybe this site becomes a Rails site, then I could do things like add comments. I&rsquo;d have to figure out how to remove some of the friction. I&rsquo;ve gotten so used to writing docs in [Org Mode](https://orgmode.org/). I&rsquo;m hoping that once the markdown ActionText editor drops that I can have a script convert my org docs to markdown and automate that process.
+
+
+<a id="orgf74b653"></a>
+
+## Overall
+
+Overall, I think my excursion into Rails has went well so far, it&rsquo;s given me some key areas to focus on in Ruby and I think with time will make me that much better of a Ruby developer for DragonRuby. This is one of the reasons I decided to give DragonRuby a shot as it gave me another avenue to explore Ruby. I think the combo of DragonRuby and Rails gives me two very different ways to approach Ruby, with DR you almost start with a blank slate each project and have to build up your tools, while with Rails, you start with the blueprint and all the pieces ready for you to assemble.

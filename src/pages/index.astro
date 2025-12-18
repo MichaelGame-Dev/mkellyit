@@ -7,43 +7,32 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 <!doctype html>
 <html lang="en">
-	<head>
+	<head> 
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+		<main >
+			<h1>Welcome</h1>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+                Welcome to my site. Here's where I share my consulting projects and princicples as well as some blog posts about things I'm
+                learning in tech or some hopefully interesting thoughts about various tech topics. If you'd like to work with me,
+                I'd encourage you to check out the <a href="/consulting">consulting</a> section to better understand what I'm like
+                to work with. If you're more interested in tech topics like Ruby, game dev, etc. head to the blog (coming soon).
+            </p>
+            <p>
+               To me, right now tech is very difficult to navigate, I either see:
+                <ul>
+                    <li>Lots of reliance on Javascript based frameworks, the cloud, or microservices</li>
+                    <li>The insertion of AI in every. possible. thing.</li>
+                </ul>
+                And don't get me wrong, for the right situations, these can be really useful tools, but for most small businesses, they simply don't make sense. 
+            </p>
+            <p>This site is built on <a href="https://astro.build/">Astro</a> and is a static site.</p>
 		</main>
 		<Footer />
+        <style>
+        </style>
+
 	</body>
 </html>

@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths() {
+  const consultingServices = await getCollection('consulting');
+  return consultingServices.map((service) => ({
+    params: { slug: service.id },
+    props: service,
+  }));
+}
+
+
+type Props = CollectionEntry<'consulting'>;
+
+const service = Astro.props;
+const { Content } = await render(service);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={service.data.title} description={service.data.description} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <article>
+        <h1>{service.data.title}</h1>
+        <p>{service.data.description}</p>
+        {service.data.service && <p><strong>Service:</strong> {service.data.service}</p>}
+        {service.data.year_completed && <p><strong>Year:</strong> {service.data.year_completed}</p>}
+
+        <Content />
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>

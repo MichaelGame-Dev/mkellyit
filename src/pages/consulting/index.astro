@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const services = (await getCollection('consulting')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Consulting Services - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Consulting Services</h1>
+
+      <h2>Principles</h2>
+      <p>My consulting principles are pretty simple. </p>
+      <ol>
+          <li>My end goal is to provide you value </li>
+          <p>This is the key for me, if I can't provide you value or can't do your project,
+              I don't want to waste your time or money. After an initial discussion about your project,
+          if I can't do it, I'll tell you. If there's particular challenges I see, I'll tell you.</p>
+
+            <li>I'm not a "Yes Man"</li>
+            <p>Ultimately, the project is yours and the </p>
+      </ol>
+      <hr />
+    <h2>Previous Projects</h2>  
+      <div class="services-grid">
+        {services.map((service) => (
+          <article class="card">
+            <h2>
+              <a href={`/consulting/${service.id}/`}>{service.data.title}</a>
+            </h2>
+            <p>{service.data.description}</p>
+            {service.data.service && <p><strong>Service Type:</strong> {service.data.service}</p>}
+            {service.data.year_completed && <p><strong>Year:</strong> {service.data.year_completed}</p>}
+          </article>
+        ))}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .services-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/BlogPost.astro';
+
+const allPosts = await getCollection('blog');
+
+
+const allTags = allPosts
+  .map((post) => post.data.tags)
+  .flat()
+  .filter(tag => tag); // Remove empty values
+
+
+const tags = [...new Set(allTags)];
+
+
+const pageTitle = "Tag Index";
+---
+<Layout pageTitle={pageTitle}>
+    <p>Articles Posted: {allPosts.length}</p>
+    <p>Total unique tags: {tags.length}</p>
+  <div class="tags flex flex-rows gap-4 flex-wrap">
+    {tags.length === 0 ? (
+      <p>No tags found. Check your blog post frontmatter.</p>
+    ) : (
+      tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`} class="btn">{tag}</a>
+        </p>
+      ))
+    )}
+  </div>
+</Layout>

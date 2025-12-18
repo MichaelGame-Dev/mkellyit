@@ -1,0 +1,47 @@
+#+title: Notes
+
+
+<BaseLayout title={service.data.title} description={service.data.description}>
+  <article class="max-w-3xl mx-auto">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{service.data.title}</h1>
+      {service.data.service && (
+        <p class="text-xl text-gray-600 dark:text-zinc-400">{service.data.service}</p>
+      )}
+    </header>
+
+    <div class="prose dark:prose-invert max-w-none">
+      <Content />
+    </div>
+
+    {relatedPosts.length > 0 && (
+      <aside class="mt-12 p-6 bg-gray-100 dark:bg-zinc-800 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Related Articles</h2>
+        <ul class="space-y-2">
+          {relatedPosts.map(post => (
+            <li>
+              <a 
+                href={`/blog/${post.id}/`}
+                class="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                {post.data.title}
+              </a>
+              <p class="text-sm text-gray-600 dark:text-zinc-400 mt-1">
+                {post.data.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <div class="mt-8 text-center">
+      <a href="/consulting" class="btn">← Back to All Services</a>
+    </div>
+  </article>
+</BaseLayout>
+
+---
+
+const { Content } = await service.render();
+---

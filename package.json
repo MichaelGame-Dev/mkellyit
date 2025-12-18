@@ -9,10 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.9",
-    "@astrojs/rss": "^4.0.13",
+    "@astro-community/astro-embed-youtube": "^0.5.7",
+    "@astrojs/mdx": "4.3.12",
+    "@astrojs/rss": "4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.15.3",
-    "sharp": "^0.34.3"
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "5.16.2",
+    "astro-embed": "^0.9.1",
+    "astro-social-share": "^2.2.0",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.17"
   }
 }
