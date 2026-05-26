@@ -14,10 +14,11 @@ import HeaderLink from './HeaderLink.astro';
 		</div>
 		<div class="internal-links flex">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/consulting">Consulting</HeaderLink>
-			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-            <!-- <HeaderLink href="/tags">Tags</HeaderLink> -->
+			<HeaderLink href="/blog">Blog</HeaderLink>
+            <HeaderLink href="/tags">Tags</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/now">Now</HeaderLink>
+			<HeaderLink href="/screenshots">Images</HeaderLink>
 		</div>
 		<div class="social-links flex gap-2 max-[720px]:hidden">
 			<a href="https://m.webtoo.ls/@astro" target="_blank" class="flex text-black dark:text-zinc-100 hover:text-gray-600 dark:hover:text-zinc-400 transition-colors">
@@ -25,9 +26,12 @@ import HeaderLink from './HeaderLink.astro';
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
-						d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
+      d="M1.5 3A1.5 1.5 0 0 0 0 4.5v7A1.5 1.5 0 0 0 1.5 13h13A1.5 1.5 0 0 0 16 11.5v-7A1.5 1.5 0 0 0 14.5 3h-13Zm0 1h13a.5.5 0 0 1 .5.5v.379L8 8.083 1 4.879V4.5a.5.5 0 0 1 .5-.5Zm-.5 2.01 6.646 3.05a.75.75 0 0 0 .708 0L15 6.01V11.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V6.01Z"
+
+					<!-- d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" -->
 					></path></svg
 				>
+
 			</a>
 			<a href="https://twitter.com/michaelgame_dev" target="_blank" class="flex text-black dark:text-zinc-100 hover:text-gray-600 dark:hover:text-zinc-400 transition-colors">
 				<span class="sr-only">Follow Michael on Twitter</span>

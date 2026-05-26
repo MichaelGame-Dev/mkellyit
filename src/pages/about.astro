@@ -1,27 +1,22 @@
 ---
 import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 import Layout from '../layouts/BlogPost.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { Content, frontmatter } from '../content/about.mdx';
 ---
 
 <Layout
-	title="About Me"
 	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
+	pubDate={new Date('December 19 2025')}
 >
-	<p>
-        I'm Michael Kelly. I have over 10 years of experience as a Business Analyst. 
-    </p>
 
-	<p>
-        This site contains blog posts about topics I learn about in programming as well as some posts about various IT
-        consulting projects I take on. You'll also find posts about my principles/philosphy when it comes to consulting.
-        I've posted a high level overview of my consulting principles here. 
-	</p>
-    <p>
-        Programming has become a much greater focus in the past few years. The majority of my programming was originally
-        in Python with a focus in Data Analytics. From there, my focus shifted to game development. At first I was working
-        in Godot, but I discovered Ruby in 20204 and started using DragonRuby for game development.
-    </p>
-    <p>
-        Ruby has been awesome. I can work on a game in DragonRuby then flip over to a Ruby on Rails web development project. If I need to do a little scripting, Ruby is great for that as well.</p>
-</Layout>
+        <h1>{frontmatter.title}</h1>
+        <p>Last updated: <FormattedDate date={new Date(frontmatter.updatedAt)} /></p>
+        <Content />
+        </main>
+		<Footer />
+        <style>
+        </style>
+        </Layout>
